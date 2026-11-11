@@ -469,7 +469,7 @@ private fun SettingsContent(
             item { JGroupItem(GroupPosition.of(0, 3)) { JRow(selected = detailKey == SettingsPageRoute(SettingsPage.About), title = stringResource(R.string.settings_section_about), leadingIcon = PhIcons.Info, subtitle = stringResource(R.string.settings_row_about_subtitle), onClick = { open(SettingsPage.About) }) } }
             item { JGroupItem(GroupPosition.of(1, 3)) { StorageRow(selected = detailKey == SettingsPageRoute(SettingsPage.Storage), onClick = { open(SettingsPage.Storage) }) } }
             item { JGroupItem(GroupPosition.of(2, 3)) {
-                JRow(stringResource(R.string.settings_update_check), value = when {
+                JRow(stringResource(R.string.settings_update_check), leadingIcon = PhIcons.ArrowClockwise, value = when {
                     busy -> stringResource(R.string.settings_update_checking)
                     installing -> stringResource(R.string.settings_update_installing)
                     update != null -> stringResource(R.string.settings_update_found)
